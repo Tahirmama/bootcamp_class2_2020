@@ -30,14 +30,11 @@ jobs:
         with: 
           version: 12
 
-      - name: GitHub Action for Yarn
-        uses: Borales/actions-yarn@v2.1.0
-        with:
-          # Yarn command
-          cmd: install # npm install/ yarn install
-
+      - name: installing npm
+        run: npm install
+        
       - name: Creating build
-        run: yarn build
+        run: npm run build
 
       - name: installing surge  
         run: npm install -g surge
